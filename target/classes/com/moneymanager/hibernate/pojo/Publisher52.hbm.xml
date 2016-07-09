@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 11, 2012 4:29:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.moneymanager.hibernate.pojo.Publisher52" table="publisher5_2" catalog="hibernate_test">
+        <id name="publisherId" type="long">
+            <column name="PUBLISHER_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="code" type="string">
+            <column name="CODE" length="4" not-null="true" unique="true" />
+        </property>
+        <property name="publisherName" type="string">
+            <column name="PUBLISHER_NAME" length="100" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 23, 2011 1:48:23 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.moneymanager.hibernate.pojo.ExpenseCategories" table="expense_categories" catalog="moneymanager">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="parentId" type="java.lang.Integer" >
+            <column name="parent_id" />
+        </property>
+        <set name="monthlyExpenseses" table="monthly_expenses" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="category" not-null="true" />
+            </key>
+            <one-to-many class="com.moneymanager.hibernate.pojo.MonthlyExpenses" />
+        </set>
+    </class>
+</hibernate-mapping>

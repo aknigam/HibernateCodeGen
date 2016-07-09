@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 11, 2012 4:29:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.moneymanager.hibernate.pojo.Book52" table="book5_2" catalog="hibernate_test">
+        <id name="bookId" type="long">
+            <column name="BOOK_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="isbn" type="string">
+            <column name="ISBN" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="bookName" type="string">
+            <column name="BOOK_NAME" length="100" not-null="true" />
+        </property>
+        <property name="publishDate" type="date">
+            <column name="PUBLISH_DATE" length="10" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="PRICE" />
+        </property>
+    </class>
+</hibernate-mapping>
